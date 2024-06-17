@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import './App.css'; // Asegúrate de crear y enlazar este archivo CSS
 
 function MainTitle(props) {
   return (
@@ -11,8 +12,7 @@ function MainTitle(props) {
       </Row>
       <Row className="mt-3">
         <Col>
-          <div className="text-center">
-            {/* Aquí la imagen utiliza la URL pasada como prop */}
+          <div className="text-center img-container">
             <img
               src={props.imagenSrc}
               className="img-fluid"

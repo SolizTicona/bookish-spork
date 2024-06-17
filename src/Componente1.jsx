@@ -1,37 +1,56 @@
-
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function TitleWithImages(props) {
   return (
-    <div className="container">
-      <h2 className="text-center mt-5 mb-4">{props.titulo1}</h2>
-      <div className="row">
-        <div className="col-md-4 mb-4">
+    <Container className="mt-5">
+      <Row>
+        <Col>
+          <h2 className="text-center">{props.titulo}</h2>
+        </Col>
+      </Row>
+      <Row className="mt-4">
+        <Col md={4} className="mb-4">
           <div className="text-center">
-            <img src="https://via.placeholder.com/200" className="img-fluid rounded-circle" alt="Imagen 1" />
+            <img
+              src={props.imagenSrc1}
+              className="img-fluid rounded-circle img-size"
+              alt="Imagen 1"
+            />
           </div>
-          <div className="mt-2">
-            <p className="text-center">{props.texto1}</p>
+          <div className="mt-2 text-center">
+            <h2 className="h5">{props.titulo1}</h2>
+            <p>{props.texto1}</p>
           </div>
-        </div>
-        <div className="col-md-4 mb-4">
+        </Col>
+        <Col md={4} className="mb-4">
           <div className="text-center">
-            <img src="https://via.placeholder.com/200" className="img-fluid rounded-circle" alt="Imagen 2" />
+            <img
+              src={props.imagenSrc2}
+              className="img-fluid rounded-circle img-size"
+              alt="Imagen 2"
+            />
           </div>
-          <div className="mt-2">
-            <p className="text-center">{props.texto2}</p>
+          <div className="mt-2 text-center">
+            <h2 className="h5">{props.titulo2}</h2>
+            <p>{props.texto2}</p>
           </div>
-        </div>
-        <div className="col-md-4 mb-4">
+        </Col>
+        <Col md={4} className="mb-4">
           <div className="text-center">
-            <img src="https://via.placeholder.com/200" className="img-fluid rounded-circle" alt="Imagen 3" />
+            <img
+              src={props.imagenSrc3}
+              className="img-fluid rounded-circle img-size"
+              alt="Imagen 3"
+            />
           </div>
-          <div className="mt-2">
-            <p className="text-center">{props.texto3}</p>
+          <div className="mt-2 text-center">
+            <h2 className="h5">{props.titulo3}</h2>
+            <p>{props.texto3}</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
